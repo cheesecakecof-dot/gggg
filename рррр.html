@@ -1,0 +1,1242 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Татьяна Перова — психофизиолог, гипнолог, организатор здравоохранения
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Психофизиолог, нейропсихолог, гипнолог и организатор здравоохранения. Разработка программ благополучия, медико‑социальной навигации и SROI‑подхода для людей, бизнеса и НКО."
+    />
+    <style>
+      :root {
+        --bg-main: #0b1020;
+        --bg-card: #111827;
+        --bg-soft: #1f2937;
+        --accent: #22c55e;
+        --accent-soft: rgba(34, 197, 94, 0.08);
+        --text: #f9fafb;
+        --muted: #9ca3af;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        line-height: 1.6;
+        color: var(--text);
+        background: radial-gradient(
+          circle at top,
+          #111827 0,
+          #020617 60%,
+          #000 100%
+        );
+      }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(15, 23, 42, 0.92);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+      }
+      .header-inner {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 10px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .logo {
+        font-weight: 600;
+        font-size: 15px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #e5e7eb;
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font-size: 13px;
+      }
+      nav a {
+        color: #e5e7eb;
+      }
+      nav a:hover {
+        color: #fff;
+      }
+
+      .menu-toggle {
+        display: none;
+        background: none;
+        border-radius: 6px;
+        border: 1px solid rgba(148, 163, 184, 0.7);
+        color: #e5e7eb;
+        padding: 4px 8px;
+        font-size: 12px;
+        cursor: pointer;
+      }
+
+      main {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 18px 16px 40px;
+      }
+
+      section {
+        background: linear-gradient(
+          135deg,
+          rgba(15, 23, 42, 0.96),
+          rgba(17, 24, 39, 0.96)
+        );
+        border-radius: 16px;
+        padding: 20px 22px;
+        margin-bottom: 16px;
+        border: 1px solid rgba(148, 163, 184, 0.35);
+        box-shadow: 0 18px 60px rgba(0, 0, 0, 0.6);
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin-top: 0.2em;
+        margin-bottom: 0.4em;
+        font-weight: 600;
+      }
+      h1 {
+        font-size: 26px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      h3 {
+        font-size: 16px;
+      }
+
+      .pill {
+        display: inline-block;
+        padding: 3px 10px;
+        border-radius: 999px;
+        font-size: 11px;
+        background: var(--accent-soft);
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+        gap: 20px;
+        align-items: center;
+      }
+      .hero-title {
+        font-size: 28px;
+        margin-bottom: 8px;
+      }
+      .hero-sub {
+        font-size: 15px;
+        color: var(--muted);
+      }
+      .hero-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 10px;
+        font-size: 11px;
+      }
+      .tag {
+        padding: 3px 8px;
+        border-radius: 999px;
+        border: 1px solid rgba(148, 163, 184, 0.6);
+        color: #e5e7eb;
+      }
+      .hero-cta {
+        margin-top: 14px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: 14px;
+      }
+      .btn-primary,
+      .btn-ghost {
+        padding: 7px 14px;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        cursor: pointer;
+        font-size: 13px;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: transparent;
+        text-decoration: none;
+      }
+      .btn-primary {
+        background: var(--accent);
+        color: #022c22;
+        border-color: #22c55e;
+        font-weight: 600;
+      }
+      .btn-primary:hover {
+        background: #16a34a;
+      }
+      .btn-ghost {
+        color: #e5e7eb;
+        border-color: rgba(148, 163, 184, 0.7);
+      }
+      .btn-ghost:hover {
+        background: rgba(15, 23, 42, 0.7);
+      }
+
+      .hero-profile-card {
+        border-radius: 14px;
+        padding: 14px;
+        background: radial-gradient(circle at top left, #22c55e22, #020617);
+        border: 1px solid rgba(148, 163, 184, 0.6);
+        font-size: 13px;
+        color: var(--muted);
+      }
+      .hero-name {
+        font-size: 18px;
+        font-weight: 600;
+        color: #f9fafb;
+        margin-bottom: 4px;
+      }
+      .hero-role {
+        color: #e5e7eb;
+        margin-bottom: 8px;
+      }
+      .hero-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        margin-top: 6px;
+      }
+      .hero-badge {
+        padding: 2px 6px;
+        border-radius: 6px;
+        background: rgba(15, 23, 42, 0.9);
+        border: 1px solid rgba(148, 163, 184, 0.5);
+        font-size: 11px;
+      }
+
+      .two-cols {
+        display: grid;
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+        gap: 18px;
+      }
+
+      ul {
+        padding-left: 18px;
+        margin-top: 4px;
+      }
+      li {
+        margin-bottom: 4px;
+      }
+
+      .label {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+        margin-bottom: 4px;
+      }
+
+      .skill-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 8px;
+        font-size: 13px;
+      }
+      .skill-card {
+        background: var(--bg-soft);
+        border-radius: 10px;
+        padding: 8px 10px;
+        border: 1px solid rgba(55, 65, 81, 0.9);
+      }
+      .skill-card h3 {
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+
+      .timeline-item {
+        border-left: 2px solid rgba(75, 85, 99, 0.8);
+        padding-left: 10px;
+        margin-bottom: 10px;
+      }
+      .timeline-item h3 {
+        font-size: 14px;
+        margin-bottom: 2px;
+      }
+      .timeline-meta {
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 10px;
+        font-size: 13px;
+      }
+      .project-card {
+        background: var(--bg-soft);
+        border-radius: 10px;
+        padding: 10px 11px;
+        border: 1px solid rgba(55, 65, 81, 0.9);
+      }
+      .project-card h3 {
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+      .project-meta {
+        font-size: 12px;
+        color: var(--muted);
+        margin-bottom: 4px;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+        gap: 16px;
+      }
+      .contact-card {
+        background: var(--bg-soft);
+        border-radius: 12px;
+        padding: 10px 12px;
+        border: 1px solid rgba(55, 65, 81, 0.9);
+        font-size: 13px;
+      }
+      .contact-row {
+        margin-bottom: 4px;
+      }
+      .contact-label {
+        font-size: 12px;
+        color: var(--muted);
+      }
+      form {
+        display: grid;
+        gap: 8px;
+        font-size: 13px;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 6px 8px;
+        border-radius: 8px;
+        border: 1px solid rgba(55, 65, 81, 0.9);
+        background: #020617;
+        color: var(--text);
+        font: inherit;
+      }
+      textarea {
+        min-height: 80px;
+        resize: vertical;
+      }
+
+      footer {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 16px 18px;
+        font-size: 11px;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      @media (max-width: 768px) {
+        .header-inner {
+          padding: 8px 10px;
+        }
+        nav {
+          display: none;
+          flex-direction: column;
+          align-items: flex-start;
+          padding-top: 6px;
+        }
+        header.open nav {
+          display: flex;
+        }
+        .menu-toggle {
+          display: inline-block;
+        }
+        .hero-grid,
+        .two-cols,
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+        main {
+          padding: 16px 12px 32px;
+        }
+        section {
+          padding: 14px 14px;
+          border-radius: 14px;
+        }
+        h1 {
+          font-size: 22px;
+        }
+        .hero-title {
+          font-size: 22px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header id="siteHeader">
+      <div class="header-inner">
+        <div class="logo">Татьяна Перова</div>
+        <button class="menu-toggle" type="button" onclick="toggleMenu()">
+          Меню
+        </button>
+        <nav>
+          <a href="#about" onclick="closeMenu()">Обо мне</a>
+          <a href="#services" onclick="closeMenu()">Чем я помогаю</a>
+          <a href="#portfolio" onclick="closeMenu()">Проекты</a>
+          <a href="#testimonials-cases" onclick="closeMenu()">Отзывы</a>
+          <a href="#credentials" onclick="closeMenu()">Образование</a>
+          <a href="#contact" onclick="closeMenu()">Контакты</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- ABOUT -->
+      <section id="about">
+        <span class="pill"
+          >Психофизиолог • Гипнолог • Организатор здравоохранения</span
+        >
+        <div class="hero-grid">
+          <div>
+            <h1 class="hero-title">
+              Соединяю клинику, психофизиологию и управление, чтобы людям и
+              организациям было проще в системе здравоохранения
+            </h1>
+            <p class="hero-sub">
+              Я работаю на стыке психологии, нейронауки и организации
+              здравоохранения: помогаю людям разобраться в своём состоянии, а
+              государственным структурам, бизнесу и НКО — выстраивать программы
+              благополучия, навигации и развития кадров.[file:260]
+            </p>
+            <div class="hero-tags">
+              <span class="tag">нейропсихология и психофизиология</span>
+              <span class="tag">гипноз и саморегуляция</span>
+              <span class="tag">организация и реформы здравоохранения</span>
+              <span class="tag">кадровые стратегии и развитие талантов</span>
+              <span class="tag">SROI и аналитика социальных проектов</span>
+            </div>
+            <div class="hero-cta">
+              <a href="#contact" class="btn-primary">Обсудить задачу</a>
+              <a href="#portfolio" class="btn-ghost"
+                >Посмотреть проекты и курсы</a
+              >
+            </div>
+          </div>
+          <div class="hero-profile-card">
+            <div class="hero-name">Татьяна Перова</div>
+            <div class="hero-role">
+              психофизиолог, нейропсихолог, гипнолог, эксперт по развитию кадров
+              в здравоохранении
+            </div>
+            <p>
+              Более 15 лет я работаю с мозгом, поведением и системами: от
+              клинической нейропсихологии и реабилитации пациентов до управления
+              федеральными проектами в здравоохранении и развития
+              wellbeing‑стратегий для крупных организаций. Вхожу в кадровый
+              резерв Росздравнадзора и Минздрава России, являюсь членом
+              Экспертного совета при Минтруде по развитию госслужбы и
+              наставником/ призёром российских и международных конкурсов,
+              включая WorldSkills.[file:260]
+            </p>
+            <p>
+              В работе с индивидуальными клиентами опираюсь на психофизиологию,
+              доказательную медицину и бережные гипнотехнологии. В проектах для
+              организаций соединяю опыт федерального уровня (Росздравнадзор,
+              нацпроекты, реформы контроля) и практику проектирования сервисов
+              для людей — от навигации по системе до программ развития
+              кадров.[file:260]
+            </p>
+            <div class="hero-badges">
+              <span class="hero-badge"
+                >клиническая нейропсихология и реабилитация</span
+              >
+              <span class="hero-badge"
+                >экспертиза в национальных проектах
+                «Здравоохранение»[file:260]</span
+              >
+              <span class="hero-badge"
+                >разработка wellbeing‑стратегий для топ‑10 банков и
+                госструктур[file:260]</span
+              >
+              <span class="hero-badge"
+                >ментор и призёр HR‑ и управленческих конкурсов,
+                WorldSkills</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 16px; font-size: 13px; color: #9ca3af">
+          <div class="label">Short bio (EN)</div>
+          <p>
+            I am a Russia‑based clinical neuropsychologist, psychophysiologist
+            and hypnotherapist with a strong background in public health
+            administration. For more than 15 years I have been working at the
+            intersection of brain science, clinical practice and health‑care
+            management — from inpatient neurorehabilitation to leading national
+            health projects and wellbeing strategies for large
+            organizations.[file:260]
+          </p>
+          <p>
+            I support individuals struggling with stress, anxiety, sleep and
+            somatic symptoms, and I help organizations design evidence‑informed
+            employee wellbeing programs, medical navigation services and talent
+            development systems. I am part of the talent pool of Russian federal
+            health authorities and serve as a mentor and award winner in Russian
+            and international skills competitions, including
+            WorldSkills.[file:260]
+          </p>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services">
+        <span class="pill">Чем я могу быть полезна</span>
+        <h2>Форматы работы</h2>
+        <div class="two-cols">
+          <div>
+            <div class="label">Для людей</div>
+            <h3>Индивидуальная работа</h3>
+            <ul>
+              <li>
+                Навигация по диагнозу: подготовка к приёму, вопросы врачу,
+                понимание назначений.
+              </li>
+              <li>
+                Работа со стрессом, тревогой, паническими атаками, нарушениями
+                сна и хронической усталостью.
+              </li>
+              <li>
+                Гипнотерапия и психофизиологические техники для саморегуляции.
+              </li>
+              <li>
+                Поддержка ухаживающих за пожилыми и людьми с хроническими
+                заболеваниями.
+              </li>
+            </ul>
+
+            <div class="label">Для семей</div>
+            <h3>Уход, старение и трудные решения</h3>
+            <ul>
+              <li>
+                Разбор ситуаций с пожилыми родителями: здоровье, уход,
+                соцподдержка, пансионаты.
+              </li>
+              <li>
+                Подготовка «паспорта здоровья» и индивидуальной карты маршрута
+                на 3–6 месяцев.
+              </li>
+              <li>
+                Профилактика выгорания ухаживающих, снижение чувства вины и
+                беспомощности.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div class="label">Для бизнеса и НКО</div>
+            <h3>B2B‑решения и консалтинг</h3>
+            <ul>
+              <li>
+                Проектирование и запуск программ «медико‑социальной навигации»
+                для сотрудников и клиентов.
+              </li>
+              <li>
+                Разработка B2B‑курса «Медико‑социальная навигация + SROI
+                проектов» для аналитиков и менеджеров.
+              </li>
+              <li>
+                Диагностика потребностей сотрудников, дизайн маршрутных карт и
+                образовательных модулей.
+              </li>
+              <li>
+                SROI‑подход: теория изменений, метрики и черновые расчёты
+                социального возврата.[file:260]
+              </li>
+            </ul>
+
+            <div class="label">Форматы</div>
+            <ul>
+              <li>Индивидуальные онлайн‑сессии.</li>
+              <li>Мини‑курсы и вебинары для команд.</li>
+              <li>
+                Долгосрочное сопровождение проектов (от идеи до пилота и
+                аналитики).
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>Ключевые компетенции</h3>
+        <div class="skill-grid">
+          <div class="skill-card">
+            <h3>Психофизиология и гипноз</h3>
+            <ul>
+              <li>
+                Связь мозга, тела и поведения при стрессе, усталости и
+                психосоматике.[file:260]
+              </li>
+              <li>
+                Эриксоновский гипноз и самогипноз как часть комплексной помощи.
+              </li>
+              <li>Психофизиология сна и хронотипов.</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3>Психология и коммуникация</h3>
+            <ul>
+              <li>Психообразование: объяснять сложное простым языком.</li>
+              <li>
+                Выстраивание диалога «пациент–врач–семья» и работа с жалобами.
+              </li>
+              <li>
+                Разработка чек‑листов, опросников и дневников для клиентов.
+              </li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3>Организация здравоохранения</h3>
+            <ul>
+              <li>
+                Опыт работы в Росздравнадзоре и проектах нацпроекта
+                «Здравоохранение».[file:260]
+              </li>
+              <li>Понимание маршрутов, клинрекомендаций, льгот и ВМП.</li>
+              <li>
+                Сотрудничество с Минздравом, Минтрудом, вузами и НКО.[file:260]
+              </li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3>Аналитика и SROI</h3>
+            <ul>
+              <li>
+                Data‑подход к здравоохранению и HR (GeeKBrains, Tableau,
+                отраслевые ИС).[file:260]
+              </li>
+              <li>
+                Построение теории изменений, подбор метрик и базовый расчёт
+                SROI.
+              </li>
+              <li>
+                Подготовка отчётов для управленцев, доноров и экспертных
+                советов.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO -->
+      <section id="portfolio">
+        <span class="pill">Проекты и продукты</span>
+        <h2>Что я уже сделала</h2>
+
+        <div class="portfolio-grid">
+          <div class="project-card">
+            <h3>B2B‑курс «Медико‑социальная навигация + SROI проектов»</h3>
+            <div class="project-meta">
+              для аналитиков, HR и менеджеров НКО / компаний
+            </div>
+            <p>
+              Структура курса от клиентской части (навигация, права, квоты,
+              реабилитация) до управленческой (теория изменений, SROI,
+              интеграция в стратегию). Лекции, интерактивные чек‑листы,
+              HTML‑модули с тестами FAS и GAD‑7, практикумы по расчёту SROI.
+            </p>
+          </div>
+
+          <div class="project-card">
+            <h3>Онлайн‑модуль «Я, моё здоровье и мои нервы»</h3>
+            <div class="project-meta">
+              для сотрудников и клиентов организаций
+            </div>
+            <p>
+              Модули помогают человеку собрать жалобы, отличить тревогу и
+              панические атаки, понять, когда срочно к врачу, а когда можно
+              планово. Встроены шкалы FAS, GAD‑7, дневники и чек‑листы для
+              подготовки к приёму.
+            </p>
+          </div>
+
+          <div class="project-card">
+            <h3>Программы поддержки ухаживающих</h3>
+            <div class="project-meta">корпоративный и НКО‑сектор</div>
+            <p>
+              Анализ нагрузки на ухаживающих, дизайн программ поддержки
+              (информация, навигация, психоподдержка, соцльготы) и маршрутов
+              долгосрочного ухода. Возможность расчёта экономического эффекта
+              через снижение выгорания и текучести кадров.
+            </p>
+          </div>
+          <div class="project-card">
+            <h3>Справочники и навигационные материалы</h3>
+            <div class="project-meta">
+              для пациентов, родственников и специалистов
+            </div>
+            <p>
+              Права пациента, ВМП и квоты, реабилитация, оформление ухода и
+              выплат; шаблоны жалоб, карты маршрута на 3–6 месяцев и чек‑листы
+              по взаимодействию с системой.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS & CASES -->
+      <section id="testimonials-cases">
+        <span class="pill">Отзывы и кейсы / Testimonials & Cases</span>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+          "
+        >
+          <h2 style="margin: 0">
+            Как я работаю и какие результаты получают клиенты
+          </h2>
+          <div style="font-size: 12px">
+            <button type="button" class="btn-ghost" onclick="setLang('ru')">
+              RU
+            </button>
+            <button type="button" class="btn-ghost" onclick="setLang('en')">
+              EN
+            </button>
+          </div>
+        </div>
+
+        <!-- RU -->
+        <div class="lang-block lang-ru">
+          <div class="two-cols">
+            <div>
+              <div class="label">Отзывы клиентов (обобщённо)</div>
+
+              <div class="timeline-item">
+                <h3>Индивидуальная работа со стрессом и тревогой</h3>
+                <p style="font-size: 13px">
+                  Клиенты отмечают, что уже за 4–6 встреч им удаётся лучше
+                  понимать свои симптомы, выстроить общение с врачами и вернуть
+                  чувство контроля. Снижается количество «экстренных» обращений
+                  и ночного гуглинга диагнозов, улучшается сон и появляется план
+                  дальнейших шагов.
+                </p>
+              </div>
+
+              <div class="timeline-item">
+                <h3>Поддержка ухаживающих за пожилыми родственниками</h3>
+                <p style="font-size: 13px">
+                  Семьи говорят, что после совместной работы им проще делить
+                  обязанности, принимать решения по уходу и взаимодействовать с
+                  врачами и соцслужбами. Уровень вины и выгорания снижается,
+                  появляется чувство, что «мы не одни и движемся по понятному
+                  маршруту».
+                </p>
+              </div>
+
+              <div class="timeline-item">
+                <h3>Гипнотерапия и психофизиологический подход</h3>
+                <p style="font-size: 13px">
+                  Люди отмечают мягкий формат гипнотерапии без давления и
+                  «чудесных обещаний», улучшение качества сна, уменьшение
+                  телесного напряжения и тревоги. Для многих ресурсным
+                  становится освоение техник самогипноза и саморегуляции.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <div class="label">Кейсы для организаций</div>
+
+              <div class="timeline-item">
+                <h3>Программа навигации и wellbeing для крупной организации</h3>
+                <p style="font-size: 13px">
+                  Задача: снизить стресс сотрудников, связанный с болезнями и
+                  уходом за близкими, и сократить потери рабочего времени.
+                  Решение: модульные онлайн‑курсы, чек‑листы, консультации и
+                  карта маршрутов по медико‑социальной системе. Результат:
+                  сотрудники стали чаще обращаться за помощью на ранних стадиях,
+                  снизилось количество конфликтных ситуаций и «тупиковых»
+                  обращений в систему.[file:260]
+                </p>
+              </div>
+
+              <div class="timeline-item">
+                <h3>Система оценки и развития кадров в федеральной службе</h3>
+                <p style="font-size: 13px">
+                  В рамках работы в Росздравнадзоре были разработаны и внедрены
+                  практики оценки и развития сотрудников, которые стали
+                  призёрами всероссийского конкурса Минтруда РФ «Лучшие практики
+                  госуправления» в 2018, 2019 и 2021 годах.[file:260] Это
+                  помогло выстроить прозрачные критерии, усилить вовлечённость и
+                  укрепить кадровый резерв.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <h3>Консалтинг по стратегическим проектам в здравоохранении</h3>
+                <p style="font-size: 13px">
+                  Участие в подготовке аналитики и дорожных карт для федеральных
+                  проектов, координации команд и взаимодействии с ключевыми
+                  стейкхолдерами. Заказчики отмечают способность соединять
+                  уровень «данные и регуляторика» с пониманием живого опыта
+                  пациента и сотрудника системы.[file:260]
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EN -->
+        <div class="lang-block lang-en" style="display: none">
+          <div class="two-cols">
+            <div>
+              <div class="label">Client feedback (generalised)</div>
+
+              <div class="timeline-item">
+                <h3>Individual work with stress and anxiety</h3>
+                <p style="font-size: 13px">
+                  Clients often report that within 4–6 sessions they gain a
+                  clearer understanding of their symptoms, feel more confident
+                  talking to doctors and regain a sense of agency. Night‑time
+                  “Dr. Google” searches decrease, sleep improves and there is a
+                  concrete plan for next steps.
+                </p>
+              </div>
+
+              <div class="timeline-item">
+                <h3>Supporting family caregivers</h3>
+                <p style="font-size: 13px">
+                  Families say it becomes easier to share responsibilities, make
+                  decisions about care and communicate with health and social
+                  services. Feelings of guilt and burnout tend to decrease,
+                  while there is more clarity about what can realistically be
+                  done now and later.
+                </p>
+              </div>
+
+              <div class="timeline-item">
+                <h3>Hypnotherapy and psychophysiological approach</h3>
+                <p style="font-size: 13px">
+                  People appreciate a gentle, non‑pressuring style of
+                  hypnotherapy without “miracle” promises. They notice better
+                  sleep, reduced bodily tension and anxiety, and value learning
+                  self‑hypnosis and self‑regulation tools they can use on their
+                  own.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <div class="label">Organizational case examples</div>
+
+              <div class="timeline-item">
+                <h3>Employee wellbeing and navigation program</h3>
+                <p style="font-size: 13px">
+                  Goal: reduce stress related to illness and caregiving and
+                  minimise lost working time. Solution: modular online courses,
+                  checklists, 1:1 consultations and navigation maps through the
+                  health‑care and social‑care systems. Result: earlier
+                  help‑seeking, fewer conflict situations and fewer “dead‑end”
+                  interactions with the system.[file:260]
+                </p>
+              </div>
+
+              <div class="timeline-item">
+                <h3>Talent assessment and development in a federal agency</h3>
+                <p style="font-size: 13px">
+                  As part of my work at the Federal Service for Healthcare
+                  Supervision, I helped build a full‑cycle system for
+                  recruitment and development, recognised as an award‑winning
+                  practice by Russia’s Ministry of Labour in 2018, 2019 and
+                  2021.[file:260] It strengthened transparency, engagement and
+                  the resilience of the talent pool.
+                </p>
+              </div>
+
+              <div class="timeline-item">
+                <h3>Consulting on national‑level health projects</h3>
+                <p style="font-size: 13px">
+                  I contributed to analytics and roadmaps for federal health
+                  projects, coordinating multidisciplinary teams and stakeholder
+                  communication. Clients value my ability to connect “data and
+                  regulation” with the lived experience of patients and
+                  front‑line staff.[file:260]
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CREDENTIALS -->
+      <section id="credentials">
+        <span class="pill">Образование и опыт</span>
+        <h2>Профессиональный путь</h2>
+        <div class="two-cols">
+          <div>
+            <div class="label">Формальное образование</div>
+
+            <div class="timeline-item">
+              <h3>Data Analyst, GeeKBrains</h3>
+              <div class="timeline-meta">2023, Москва</div>
+              <ul>
+                <li>
+                  Аналитика данных, Python/SQL, визуализация и дашборды с
+                  фокусом на здравоохранение и HR.[file:260]
+                </li>
+              </ul>
+            </div>
+
+            <div class="timeline-item">
+              <h3>«Высшая нервная деятельность, нейрофизиология поведения»</h3>
+              <div class="timeline-meta">
+                МГУ им. М.В. Ломоносова, 2022, Москва
+              </div>
+              <ul>
+                <li>
+                  Нейрофизиология поведения, нейропластичность, современные
+                  подходы к изучению мозга.[file:260]
+                </li>
+              </ul>
+            </div>
+
+            <div class="timeline-item">
+              <h3>«Руководитель цифровой трансформации» (CDTO)</h3>
+              <div class="timeline-meta">
+                РАНХиГС при Президенте РФ, 2019, Москва
+              </div>
+              <ul>
+                <li>
+                  Цифровая трансформация, управление изменениями и сервисным
+                  подходом в госуправлении и здравоохранении.[file:260]
+                </li>
+              </ul>
+            </div>
+
+            <div class="timeline-item">
+              <h3>Нейропсихолог‑психофизиолог</h3>
+              <div class="timeline-meta">
+                РНИМУ им. Н.И. Пирогова, 2017, Москва
+              </div>
+              <ul>
+                <li>
+                  Клиническая нейропсихология и психофизиология.[file:260]
+                </li>
+                <li>
+                  Реабилитация пациентов после ЧМТ и инсультов с использованием
+                  нейрогарнитур.[file:260]
+                </li>
+                <li>
+                  Замещающий онтогенез при задержках психического
+                  развития.[file:260]
+                </li>
+              </ul>
+            </div>
+
+            <div class="timeline-item">
+              <h3>Психиатрия раннего возраста</h3>
+              <div class="timeline-meta">
+                РМАНПО, кафедра детской психиатрии и психотерапии, 2017, Москва
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <h3>Эриксоновский гипноз</h3>
+              <div class="timeline-meta">
+                Институт психотерапии и клинической психологии, 2016, Москва
+              </div>
+              <ul>
+                <li>
+                  Интеграция гипноза в комплексные программы
+                  психотерапевтической и реабилитационной помощи.[file:260]
+                </li>
+              </ul>
+            </div>
+
+            <div class="timeline-item">
+              <h3>Психофизиология, нейронаука обучения</h3>
+              <div class="timeline-meta">
+                Институт психологии РАН — ГАУГН, 2005, Москва
+              </div>
+              <ul>
+                <li>
+                  Психофизиологические закономерности формирования нового опыта
+                  при научении.[file:260]
+                </li>
+                <li>
+                  Поведенческие и морфологические особенности развития мозга в
+                  онтогенезе.[file:260]
+                </li>
+              </ul>
+            </div>
+
+            <div class="label">Дополнительные сертификаты</div>
+            <ul>
+              <li>
+                «Актуальные вопросы современной неврологии», «Неврология в
+                клинических примерах», «Аспекты неврологии в общей
+                терапевтической практике».[file:260]
+              </li>
+              <li>
+                «Психическое здоровье человека и общества. Актуальные
+                междисциплинарные проблемы».[file:260]
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="label">Ключевые роли и проекты</div>
+
+            <div class="timeline-item">
+              <h3>
+                Управление проектами в здравоохранении и wellbeing‑стратегиях
+              </h3>
+              <div class="timeline-meta">2021 – н.в., Москва</div>
+              <ul>
+                <li>
+                  Подготовка аналитических обзоров и дорожных карт развития
+                  здравоохранения на федеральном уровне.[file:260]
+                </li>
+                <li>
+                  Консалтинг по wellbeing‑стратегиям для Управления госслужбы и
+                  кадров Президента РФ, Минздрава, банков топ‑10.[file:260]
+                </li>
+                <li>
+                  Концепция развития АНО «Московский центр инновационных
+                  технологий в здравоохранении», подбор руководителей
+                  проектов.[file:260]
+                </li>
+                <li>
+                  Наставничество и призовые места в российских и международных
+                  конкурсах по развитию кадров, включая WorldSkills.
+                </li>
+              </ul>
+            </div>
+            <div class="timeline-item">
+              <h3>
+                Федеральная служба по надзору в сфере здравоохранения
+                (Росздравнадзор)
+              </h3>
+              <div class="timeline-meta">
+                2018 – 2021, Центральный аппарат, Москва
+              </div>
+              <ul>
+                <li>
+                  Управление проектами и координация междисциплинарных команд в
+                  рамках нацпроекта «Здравоохранение».[file:260]
+                </li>
+                <li>
+                  Сопровождение проектов по первичной помощи,
+                  сердечно‑сосудистым заболеваниям, НМИЦ и кадровому
+                  обеспечению.[file:260]
+                </li>
+                <li>
+                  Разработка ТЗ на внедрение ИИ в «горячую линию» и построение
+                  системы рекрутмента и развития персонала.[file:260]
+                </li>
+                <li>
+                  Проекты‑призёры конкурса Минтруда РФ «Лучшие практики
+                  госуправления» (2018, 2019, 2021).[file:260]
+                </li>
+              </ul>
+            </div>
+
+            <div class="timeline-item">
+              <h3>Клиническая нейропсихология и психофизиология</h3>
+              <div class="timeline-meta">2009 – 2018, Москва</div>
+              <ul>
+                <li>
+                  Работа в Психиатрической клинической больнице №1 им. Н.А.
+                  Алексеева, ФМИЦПН им. В.П. Сербского, Центре патологии речи и
+                  нейрореабилитации.[file:260]
+                </li>
+                <li>
+                  Более 1200 психодиагностических исследований и 1000+
+                  нейрокоррекционных занятий.[file:260]
+                </li>
+                <li>
+                  Внедрение нейроинтерфейсов (пассивные BCI) в реабилитацию,
+                  работа с онкологическими и соматическими пациентами.[file:260]
+                </li>
+              </ul>
+            </div>
+
+            <div class="timeline-item">
+              <h3>Развитие кадров и HR‑стратегии</h3>
+              <div class="timeline-meta">госструктуры и частный сектор</div>
+              <ul>
+                <li>
+                  Создание систем оценки и развития персонала в Росздравнадзоре
+                  и других организациях.[file:260]
+                </li>
+                <li>
+                  Наставничество и экспертная работа в российских и
+                  международных конкурсах компетенций (в т.ч. WorldSkills).
+                </li>
+                <li>
+                  Член Экспертного совета по развитию госслужбы при Минтруде РФ;
+                  включена в кадровый резерв Росздравнадзора и Минздрава
+                  России.[file:260]
+                </li>
+              </ul>
+            </div>
+
+            <div class="label">Languages / Tools</div>
+            <ul>
+              <li>
+                Languages: Russian (native), English (B2), French
+                (A1).[file:260]
+              </li>
+              <li>
+                Tools: MS Office, Google Suite, Tableau, отраслевые ИС
+                здравоохранения, аналитика данных.[file:260]
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="label" style="margin-top: 10px">Brief credentials (EN)</div>
+        <p style="font-size: 13px; color: #9ca3af">
+          Clinical neuropsychologist and psychophysiologist with additional
+          education in healthcare management, digital transformation (CDTO) and
+          data analytics. Former project lead at the Federal Service for
+          Healthcare Supervision (Roszdravnadzor), involved in national health
+          projects and talent‑development systems. Member of expert councils
+          under the Russian Ministry of Labour, part of the federal health
+          talent pool, mentor and award‑winner in Russian and international
+          skills competitions, including WorldSkills.[file:260]
+        </p>
+      </section>
+      <!-- CONTACT -->
+      <section id="contact">
+        <span class="pill">Связаться со мной</span>
+        <h2>Напишите, какую задачу вы хотите решить</h2>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="contact-row">
+              <div class="contact-label">Форматы</div>
+              <div>
+                онлайн‑сессии, консалтинг, вебинары, разработка программ и
+                курсов
+              </div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-label">Темы</div>
+              <div>
+                личное состояние, стресс, сон, навигация по диагнозу, поддержка
+                ухаживающих, корпоративные и НКО‑проекты
+              </div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-label">География</div>
+              <div>
+                онлайн‑работа с клиентами из России, СНГ и других стран (с
+                учётом местного законодательства)
+              </div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-label">Контакты</div>
+              <div>
+                Телефон: +7 (916) 888‑80‑68<br />
+                E‑mail:
+                <a href="mailto:tanperova@yandex.ru">tanperova@yandex.ru</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="label">Форма запроса</div>
+            <form>
+              <div>
+                <label>Имя</label>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Как к вам обращаться"
+                />
+              </div>
+              <div>
+                <label>Контакт для связи</label>
+                <input
+                  type="text"
+                  name="contact"
+                  placeholder="E‑mail или телеграм"
+                />
+              </div>
+              <div>
+                <label>Что вы хотите обсудить?</label>
+                <textarea
+                  name="message"
+                  placeholder="Коротко опишите запрос: личная консультация, программа для сотрудников, оценка проекта и т.п."
+                ></textarea>
+              </div>
+              <button type="submit" class="btn-primary">
+                Отправить запрос (макет)
+              </button>
+            </form>
+            <p class="note">
+              Кнопка отправки здесь демонстрационная. На выбранной платформе её
+              можно связать с почтой, CRM или формой записи.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Татьяна Перова. Психофизиология, гипнотерапия,
+      медико‑социальная навигация и SROI‑подход.
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        const header = document.getElementById("siteHeader");
+        header.classList.toggle("open");
+      }
+      function closeMenu() {
+        const header = document.getElementById("siteHeader");
+        header.classList.remove("open");
+      }
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      function setLang(lang) {
+        const ruBlocks = document.querySelectorAll(".lang-ru");
+        const enBlocks = document.querySelectorAll(".lang-en");
+        if (lang === "ru") {
+          ruBlocks.forEach((b) => (b.style.display = ""));
+          enBlocks.forEach((b) => (b.style.display = "none"));
+        } else {
+          ruBlocks.forEach((b) => (b.style.display = "none"));
+          enBlocks.forEach((b) => (b.style.display = ""));
+        }
+      }
+    </script>
+  </body>
+</html>
